@@ -39,6 +39,7 @@ return {
 			date_format = "%Y-%m-%d",
 			template = "daily-template.md",
 			default_tags = { "todo" },
+			workdays_only = false,
 		},
 		note_id_func = note_id,
 	},
