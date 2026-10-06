@@ -22,6 +22,7 @@ return {
 		{ "<leader>od", "<cmd>Obsidian today<cr>", desc = "New daily template" },
 		{ "<leader>oy", "<cmd>Obsidian yesterday<cr>", desc = "Yesterday's daily template" },
 		{ "<leader>or", "<cmd>Obsidian tomorrow<cr>", desc = "Tomorrow's daily template" },
+		{ "<leader>op", "<cmd>Obsidian paste_image<cr>", desc = "Paste image into note" },
 	},
 	opts = {
 		legacy_commands = false,
