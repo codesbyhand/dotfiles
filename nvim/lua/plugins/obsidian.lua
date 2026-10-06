@@ -15,6 +15,7 @@ return {
 	cmd = "Obsidian",
 	keys = {
 		{ "<leader>on", "<cmd>Obsidian new<cr>", desc = "New note" },
+		{ "<leader>oo", "<cmd>Obsidian open<cr>", desc = "Open note" },
 		{ "<leader>oq", "<cmd>Obsidian quick_switch<cr>", desc = "Find note" },
 		{ "<leader>os", "<cmd>Obsidian search<cr>", desc = "Search notes" },
 		{ "<leader>ob", "<cmd>Obsidian backlinks<cr>", desc = "Backlinks" },
