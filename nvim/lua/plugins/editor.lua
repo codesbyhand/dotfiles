@@ -11,6 +11,7 @@ return {
 			bigfile = { enabled = true },
 			words = { enabled = true },
 			input = { enabled = true },
+			image = { enabled = true },
 			picker = {
 				enabled = true,
 				sources = {
