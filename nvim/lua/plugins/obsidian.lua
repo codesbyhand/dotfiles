@@ -8,6 +8,20 @@ local function note_id(title)
 	return id .. "-" .. slug
 end
 
+local function journal_today()
+	local vault = vim.fn.expand("~/vaults/Mind Palace")
+	local name = os.date("%Y-%m-%d") .. "-journal"
+	local path = vault .. "/journal/" .. name .. ".md"
+	local is_new = vim.uv.fs_stat(path) == nil
+
+	vim.fn.mkdir(vim.fn.fnamemodify(path, ":h"), "p")
+	vim.cmd.edit(vim.fn.fnameescape(path))
+
+	if is_new then
+		vim.cmd("Obsidian template journal-template.md")
+	end
+end
+
 return {
 	"obsidian-nvim/obsidian.nvim",
 	version = "*",
@@ -24,6 +38,7 @@ return {
 		{ "<leader>oy", "<cmd>Obsidian yesterday<cr>", desc = "Yesterday's daily template" },
 		{ "<leader>or", "<cmd>Obsidian tomorrow<cr>", desc = "Tomorrow's daily template" },
 		{ "<leader>op", "<cmd>Obsidian paste_image<cr>", desc = "Paste image into note" },
+		{ "<leader>oj", journal_today, desc = "Today's journal" },
 	},
 	opts = {
 		legacy_commands = false,
