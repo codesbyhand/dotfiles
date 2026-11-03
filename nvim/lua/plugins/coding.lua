@@ -54,6 +54,7 @@ return {
 				"bash",
 				"regex",
 				"yaml",
+				"python",
 			})
 			vim.api.nvim_create_autocmd("FileType", {
 				callback = function()
